@@ -635,3 +635,233 @@ header .container {
     }
 }
 
+
+/* Profile Picture Styles */
+.profile-pic {
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 10;
+}
+
+.profile-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff6b35;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+/* Make hero-text position relative to contain the absolute positioned profile pic */
+.hero-text {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 1s ease forwards;
+}
+
+/* Mobile responsive adjustments */
+@media (max-width: 767px) {
+    .profile-pic {
+        top: 10px;
+        right: 10px;
+    }
+    
+    .profile-image {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .profile-pic {
+        top:-40px;
+        right: 5px;
+    }
+    
+    .profile-image {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+    .profile-image {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* logo on mobile view */
+
+/* Hide header logo on mobile */
+@media (max-width: 767px) {
+    .logo {
+        display: none;
+    }
+    
+    /* Adjust header container for mobile */
+    header .container {
+        justify-content: flex-end;
+        padding: 0 1rem;
+    }
+    
+    /* Show only 3 menu items and align left */
+    .dropdown-content a {
+        display: none; /* Hide all by default */
+    }
+    
+    /* Show only specific menu items */
+    .dropdown-content a[href="#about"],
+    .dropdown-content a[href="#events"], 
+    .dropdown-content a[href="#contact"] {
+        display: block;
+    }
+    
+    /* Align dropdown content to left */
+    .dropdown-content {
+        right: auto;
+        left: 0;
+        min-width: 150px;
+    }
+}
+
+/* Circular logo in hero section for mobile */
+.hero-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.hero-logo-image {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff6b35;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    background: white;
+}
+
+/* Hide hero logo on desktop */
+@media (min-width: 768px) {
+    .hero-logo {
+        display: none;
+    }
+}
+
+/* Mobile responsive adjustments for hero logo */
+@media (max-width: 767px) {
+    .hero-logo {
+        top: 10px;
+        left: 10px;
+    }
+    
+    .hero-logo-image {
+        width: 50px;
+        height: 50px;
+        border-width: 2px;
+    }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+    .hero-logo {
+        top: -40px;
+        left: 5px;
+    }
+    
+    .hero-logo-image {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+/* Mobile Navigation Updates */
+.mobile-nav {
+    display: none;
+}
+
+@media (max-width: 767px) {
+    /* Hide header logo on mobile */
+    .logo {
+        display: none;
+    }
+    
+    /* Hide main nav on mobile */
+    .main-nav {
+        display: none;
+    }
+    
+    /* Show mobile nav */
+    .mobile-nav {
+        display: flex;
+        gap: 0.8rem;
+        align-items: center;
+        flex: 1;
+    }
+    
+    .mobile-nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 0.85rem;
+        padding: 0.4rem 0.6rem;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+        text-shadow: 0 1px 2px rgba(0,0,0,0.2);
+        white-space: nowrap;
+    }
+    
+    .mobile-nav a:hover {
+        background: rgba(255, 255, 255, 0.15);
+        transform: translateY(-1px);
+    }
+    
+    /* Adjust header container for mobile */
+    header .container {
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+    }
+    
+    /* Improve hamburger visibility */
+    .dropdown-btn {
+        background: rgba(255, 255, 255, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 4px;
+        padding: 8px;
+        transition: all 0.3s ease;
+    }
+    
+    .dropdown-btn:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+    
+    /* Make hamburger bars more visible */
+    .bar {
+        background: white;
+        box-shadow: 0 1px 2px rgba(0,0,0,0.2);
+    }
+    
+    /* Show ALL menu items in dropdown on mobile */
+    .dropdown-content a {
+        display: block; /* Show all menu items in dropdown */
+    }
+    
+    /* Dropdown content positioning */
+    .dropdown-content {
+        right: 0;
+        left: auto;
+        min-width: 200px;
+    }
+}
