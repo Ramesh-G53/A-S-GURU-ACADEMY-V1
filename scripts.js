@@ -186,7 +186,7 @@ const slidingPngConfig = {
     width: '80%',           // Width of the PNG container (desktop)
     height: '70%',          // Height of the PNG container (desktop)
     slideInDelay: 500,      // Delay before sliding in (ms)
-    slideOutDelay: 7000,    // Delay after sliding in before sliding out (5 seconds)
+    slideOutDelay: 10000,    // Delay after sliding in before sliding out (5 seconds)
     animationDuration: 1500, // Duration of slide animation (slower)
     autoSlideOut: true,     // Whether to automatically slide out
     scrollTrigger: true     // Whether to re-trigger on scroll
